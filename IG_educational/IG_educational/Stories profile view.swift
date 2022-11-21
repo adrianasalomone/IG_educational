@@ -9,9 +9,10 @@ import SwiftUI
 
 struct Stories_profile_view: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             Image("profilestories")
                 .resizable()
+                .padding()
                 .frame(width:200, height:200)
                 
             Text("Username")

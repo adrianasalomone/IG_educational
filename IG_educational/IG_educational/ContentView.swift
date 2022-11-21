@@ -9,16 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        ScrollView(.vertical) {
-            Stories_section()
+        NavigationView(){
+            
+            ScrollView(.vertical) {
+                Stories_section()
+                
+            }
+                .navigationTitle("Instadram")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarBackButtonHidden()
         }
-        .padding()
+        
+        
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }

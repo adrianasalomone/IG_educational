@@ -9,10 +9,20 @@ import SwiftUI
 
 struct Stories_section: View {
     var body: some View {
-        ScrollView(.horizontal) {
-            Stories_profile_view()
+        
+        VStack {
+            ScrollView(.horizontal) {
+                HStack(spacing: 2) {
+                    Stories_profile_view()
+                        .frame(maxHeight: 70)
+                        .scaleEffect(0.4)
+                    
+                    }.padding()
             }
-        .padding()
+            .frame(height: 100, alignment: .leading)
+            Divider()
+            Spacer()
+        }
     }
 }
 
