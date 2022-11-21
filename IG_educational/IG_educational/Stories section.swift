@@ -14,7 +14,8 @@ struct Stories_section: View {
             ScrollView(.horizontal) {
                 HStack(spacing: 2) {
                     Stories_profile_view()
-                        .frame(maxHeight: 70)
+                        .frame(maxWidth: 100, maxHeight: 70)
+                        .aspectRatio(contentMode: .fit)
                         .scaleEffect(0.4)
                     
                     }.padding()

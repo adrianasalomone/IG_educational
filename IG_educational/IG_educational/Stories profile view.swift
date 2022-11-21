@@ -13,6 +13,7 @@ struct Stories_profile_view: View {
             Image("profilestories")
                 .resizable()
                 .padding()
+                .aspectRatio(contentMode: .fit)
                 .frame(width:200, height:200)
                 
             Text("Username")
