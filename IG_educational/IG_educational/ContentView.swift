@@ -8,24 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+  @ObservedObject var postVM = PostViewModel()
     var body: some View {
-        NavigationView(){
+        
+        
+        
+        VStack {
             
-            ScrollView(.vertical) {
-                Stories_section()
+            TitleView()
+            
+            ScrollView {
+                
+                StoriesSection()
+                
+                ForEach(postVM.listOfPosts) { post in
+                    PostView(post: post)
+                    
+                    
+                }
+                
+                
                 
             }
-                .navigationTitle("Instadram")
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarBackButtonHidden()
-        }
-        
-        
-    }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+        }.padding(.horizontal, 10)
     }
 }
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+

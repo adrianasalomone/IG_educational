@@ -12,10 +12,11 @@ struct User: Identifiable {
     
     var id: UUID
     var username: String
+
     
     private var avatarPic: String
-    var avatar: Image {Image(avatarPic)
-        
-        
-    }
+    var avatar: Image {
+        Image(avatarPic)
+        }
+    
 }
