@@ -10,9 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
   @ObservedObject var postVM = PostViewModel()
+    
     var body: some View {
-        
-        
         
         VStack {
             
@@ -25,12 +24,11 @@ struct ContentView: View {
                 ForEach(postVM.listOfPosts) { post in
                     PostView(post: post)
                     
-                    
                 }
-                
-                
-                
             }
+            
+            BottomBarView()
+            
         }.padding(.horizontal, 10)
     }
 }

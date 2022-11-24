@@ -23,8 +23,6 @@ struct StoriesSection: View {
                     StoriesProfileView()
                     StoriesProfileView()
                     StoriesProfileView()
-               
-                       
                     
                     
                 }.scaledToFit()
@@ -32,7 +30,7 @@ struct StoriesSection: View {
             .frame(height: 100, alignment: .leading)
             Divider()
             Spacer()
-        } .padding()
+        } .padding(.horizontal, 10)
     }
 }
 

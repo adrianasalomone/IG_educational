@@ -16,6 +16,9 @@ struct PostView: View {
         VStack {
             
             HStack {
+                
+                //profile user activity
+                
                 ZStack (alignment: .center) {
                     
                     Image("Instagram-Ring-70x70")
@@ -41,12 +44,17 @@ struct PostView: View {
                 
               Image(systemName: "ellipsis")
             }
+            
+            //Post image
                     
             Image(post.postImage)
                 .resizable()
                 .scaledToFit()
             
+            //like comment send save
+            
             HStack (spacing: 16) {
+
                 
                             Button (action: {
                                 // add action here
